@@ -1,0 +1,77 @@
+.login-main {
+    background: #f6f6f6;
+}
+.login-view {
+    margin-top: 2rem;
+}
+.login-container {
+    background: #fff;
+    width: 376px;
+    margin: auto;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.08);
+    text-align: center;
+    border-radius: 5px;
+}
+.login-email {
+    padding: 32px;
+}
+.login-title {
+    margin-bottom: 25px;
+}
+.form-input-login {
+    font-size: 14px;
+    height: 50px;
+    margin-bottom: 18px;
+}
+.button-login {
+    outline: none !important;
+    background: #1b6abb;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-family: Circular,Arial,sans-serif;
+    font-weight: 300;
+    transition: all .2s ease-in-out;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 18px;
+    padding: 15px 40px;
+    width: 100%;
+}
+.login-lostpassword {
+    margin-top: 16px;
+    text-align: center;
+}
+.login-lostpassword a{
+    font-size: 14px;
+    color: #1b6abb;
+    text-decoration: none;
+}
+.account-footer {
+    padding: 32px;
+    background-color: #f6f6f6;
+}
+.account-footer-create {
+    margin-bottom: 16px;
+}
+.account-footer-create span{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.37;
+    color: #3a3c3f;
+}
+.account-footer-btn {
+    display: block;
+    padding: 12px 0.8em 12px 0.8em;
+    font-size: 14px;
+    border: 1px solid #1b6abb;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #1b6abb;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}

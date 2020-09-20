@@ -1,3 +1,20 @@
 p {
   font-size: 14px;
 }
+
+input {
+  appearance: none;
+  background: #fff;
+  border: 1px solid #dae2f2;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-sizing: border-box;
+  color: #676e8b;
+  display: inline-block;
+  font-family: Circular,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+}

@@ -1,18 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './../styles/Navbar.css'
 import logo from './../assets/logo.png'
-const Navbar = () => {
+
+const Navbar = ({see}) => {
     return(
         <nav className="navbar navbar-expand-md padding-navbar background background-color">
             <div className="container">
-                <a href="#home" className="navbar-brand">
+                <Link to="/" className="navbar-brand">
                     <img
                         src={logo}
                         alt="logo de Adevolver"
                         className="logo-img"
                     />
-                </a>
+                </Link>
                 <nav>
                     <button
                         type="button"
@@ -26,30 +28,28 @@ const Navbar = () => {
                     </button>
                 </nav>
                 <div className="collapse navbar-collapse" id="navbarCollapse">
+                    {
+                        see == true &&
+                        <div className="navbar-nav ml-auto">
+                            <Link to="/" className="nav-item nav-link-s ml-4 font-nav-item">Inicio</Link>
+                            <a href="#about" className="nav-item nav-link-s ml-4 font-nav-item">
+                                <span>Acerca De</span>
+                            </a>
+                            <a href="#treatment" className="nav-item nav-link-s ml-4 font-nav-item">
+                                <span>Tratamientos</span>
+                            </a>
+                            <a href="#location" className="nav-item nav-link-s ml-4 font-nav-item">
+                                <span>Ubicación</span>
+                            </a>
+                            <a href="#contact" className="nav-item nav-link-s ml-4 font-nav-item">
+                                <span>Contacto</span>
+                            </a>
+                        </div>
+                    }
+
                     <div className="navbar-nav ml-auto">
-                        <a href="#home" className="nav-item nav-link-s ml-4 font-nav-item">
-                            <span>Inicio</span>
-                        </a>
-                        <a href="#about" className="nav-item nav-link-s ml-4 font-nav-item">
-                            <span>Acerca De</span>
-                        </a>
-                        <a href="#treatment" className="nav-item nav-link-s ml-4 font-nav-item">
-                            <span>Tratamientos</span>
-                        </a>
-                        <a href="#location" className="nav-item nav-link-s ml-4 font-nav-item">
-                            <span>Ubicación</span>
-                        </a>
-                        <a href="#contact" className="nav-item nav-link-s ml-4 font-nav-item">
-                            <span>Contacto</span>
-                        </a>
-                    </div>
-                    <div className="navbar-nav ml-auto">
-                        <a href="" className="nav-item nav-link-s ml-4 font-nav-item">
-                            <span>Login</span>
-                        </a>
-                        <a href="" className="nav-item ml-4 font-nav-item btn-login">
-                            Sign up
-                        </a>
+                        <Link to="/login" className="nav-item nav-link-s ml-4 font-nav-item">Iniciar sesión</Link>
+                        <Link to="/signup" className="nav-item ml-4 font-nav-item btn-login">Registrate</Link>
                     </div>
                 </div>
             </div>
