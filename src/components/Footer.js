@@ -30,10 +30,10 @@ const Footer = () => {
                         <div className="col-md-3 mt-4">
                             <h3>Siguenos</h3>
                             <div className="footer-icons mt-4">
-                                    <img src={facebook} className="icons-img"/>
-                                    <img src={twitter} className="icons-img"/>
-                                    <img src={instagram} className="icons-img"/>
-                                    <img src={linkedin} className="icons-img"/>
+                                    <img src={facebook} className="icons-img" alt="icono de facebook"/>
+                                    <img src={twitter} className="icons-img" alt="icono de twitter"/>
+                                    <img src={instagram} className="icons-img" alt="icono de instagram"/>
+                                    <img src={linkedin} className="icons-img" alt="icono de linkedin"/>
                             </div>
                         </div>
                     </div>

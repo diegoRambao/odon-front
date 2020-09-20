@@ -1,0 +1,24 @@
+.img-profile-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.dropdown-menu{
+    top: 134%;
+    border-color: #e7e7e7;
+}
+.container-profile-nav {
+    display: flex;
+    align-items: center;
+}
+.name-profile-nav {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #343434cc;
+}
+.img-profile-small-nav {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

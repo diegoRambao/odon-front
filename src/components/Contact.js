@@ -15,21 +15,21 @@ const Contact = () => {
                     <div className="row mt-5">
                         <div className="col-md-4 mb-4 d-flex align-items-stretch">
                             <div className="card-contact">
-                                <img src={icPhone} className="Phone"/>
+                                <img src={icPhone} className="Phone" alt="icono telefono"/>
                                 <h3 className="title-card-contact mt-3 mb-3">Equipo profesional y experimentado</h3>
-                                <p className="mb-4 paragraph-contact">¡El equipo de soporte de Theeth está aquí para ayudar! Abra un chat o envíe un correo electrónico a <a href="#">support@theeth.com</a> .</p>
+                                <p className="mb-4 paragraph-contact">¡El equipo de soporte de Theeth está aquí para ayudar! Abra un chat o envíe un correo electrónico a <a href="mail:support@theeth.com">support@theeth.com</a> .</p>
                             </div>
                         </div>
                         <div className="col-md-4 mb-4 d-flex align-items-stretch">
                             <div className="card-contact">
-                                <img src={icBuoy} className="Phone"/>
+                                <img src={icBuoy} className="Phone" alt="icono de compra"/>
                                 <h3 className="title-card-contact mt-3 mb-3">Centro de ayuda</h3>
                                 <p className="mb-4 paragraph-contact">Obtenga sugerencias y respuestas rápidas sobre el uso de Looka para diseñar un logotipo y generar activos de marca.</p>
                             </div>
                         </div>
                         <div className="col-md-4 mb-4 d-flex align-items-stretch">
                             <div className="card-contact">
-                                <img src={icSuitcase} className="Phone"/>
+                                <img src={icSuitcase} className="Phone" alt="icono carreras"/>
                                 <h3 className="title-card-contact mt-3 mb-3">Carreras</h3>
                                 <p className="mb-4 paragraph-contact">Únase a una empresa de rápido crecimiento apasionada por el diseño y la tecnología.</p>
                             </div>

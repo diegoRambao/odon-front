@@ -1,14 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import './../styles/Navbar.css'
-import logo from './../assets/logo.png'
+import './../styles/NavBarDash.css'
 
-const Navbar = ({see, location}) => {
+import logo from './../assets/logo.png'
+import profile from './../assets/profile.jpg'
+
+import { getContextUser, logout } from './../services/Authentication.service'
+
+const NavBarDash = () =>{
+
+    const { typeUser, person } = getContextUser();
+    let history = useHistory();
+
+    const handleLogout = () => {
+        logout()
+        history.push('/login')
+    }
     return(
-        <nav className="navbar navbar-expand-md padding-navbar background background-color">
+        <div>
+            <nav className="navbar navbar-expand-md padding-navbar background background-color">
             <div className="container">
-                <Link to="/" className="navbar-brand">
+                <Link to="/main" className="navbar-brand">
                     <img
                         src={logo}
                         alt="logo de Adevolver"
@@ -29,7 +43,7 @@ const Navbar = ({see, location}) => {
                 </nav>
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     {
-                        see === true &&
+                        typeUser == 'A' &&
                         <div className="navbar-nav ml-auto">
                             <Link to="/" className="nav-item nav-link-s ml-4 font-nav-item">Inicio</Link>
                             <a href="#about" className="nav-item nav-link-s ml-4 font-nav-item">
@@ -46,15 +60,26 @@ const Navbar = ({see, location}) => {
                             </a>
                         </div>
                     }
-
                     <div className="navbar-nav ml-auto">
-                        <Link to="/login" className="nav-item nav-link-s ml-4 font-nav-item">Iniciar sesión</Link>
-                        <Link to="/signup" className="nav-item ml-4 font-nav-item btn-login">Registrate</Link>
+                        <div className="dropdown">
+                            <div class="container-profile-nav" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                <div className="">
+                                    <img src={profile} className="img-profile-nav"></img>
+                                </div>
+                                <p className="name-profile-nav ml-2">{person.name} {person.surname}</p>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Perfil</a>
+                                <a class="dropdown-item" href="#">Mis Citas</a>
+                                <button class="dropdown-item" onClick={handleLogout}>Cerrar sesión</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
+        </div>
     )
 }
 
-export default Navbar
+export default NavBarDash

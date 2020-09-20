@@ -22,7 +22,7 @@ const Reason = () => {
                 <div className="col-md-4 mb-4 d-flex align-items-stretch">
                     <div className="card-reason shadow">
                         <div className="container-img-card green-color">
-                            <img src={phone} className="img-reason"/>
+                            <img src={phone} className="img-reason" alt="icono de telefono"/>
                         </div>
                         <h3 className="title-card-reason mt-3 mb-3">Equipo profesional y experimentado</h3>
                         <p className="mb-4">Nuestra mejor garant a es el trabajo de nuestros profesionales. Nuestros pacientes as  lo confirman.</p>
@@ -31,7 +31,7 @@ const Reason = () => {
                 <div className="col-md-4 mb-4 d-flex align-items-stretch">
                     <div className="card-reason shadow">
                         <div className="container-img-card blue-color">
-                            <img src={date} className="img-reason"/>
+                            <img src={date} className="img-reason" alt="icono de horario"/>
                         </div>
                         <h3 className="title-card-reason mt-3 mb-3">Horarios y atención personalizada</h3>
                         <p className="mb-4">Abiertos de 7 a.m. a 8 p.m. Le permitimos elegir la hora y el día que mejor se adapte a su ritmo de vida.</p>
@@ -40,7 +40,7 @@ const Reason = () => {
                 <div className="col-md-4 mb-4 d-flex align-items-stretch">
                     <div className="card-reason shadow">
                         <div className="container-img-card orange-color">
-                            <img src={money} className="img-reason"/>
+                            <img src={money} className="img-reason" alt="icono de moneda"/>
                         </div>
                         <h3 className="title-card-reason mt-3 mb-3">Primera consulta y diagnóstico gratuito</h3>
                         <p className="mb-4">Radiografía panorámica y diagnóstico personalizado, gratis y sin compromiso.</p>
