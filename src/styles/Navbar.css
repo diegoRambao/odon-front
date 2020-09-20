@@ -1,0 +1,88 @@
+.navbar {
+    box-shadow: 0 5px 20px 0 rgba(11,7,110,.04);
+}
+.background-color{
+    background: #fff;
+}
+.logo-img{
+    height: 35px;
+}
+.menu-1 {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-item{
+    color: #343434cc;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.navbar-toggler {
+    background: transparent;
+    border: 0;
+    height: 20px;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    width: 20px;
+    outline: none !important;
+}
+.navbar-toggler:before {
+    top: 1%;
+    transform-origin: center;
+}
+.navbar-toggler:after, .navbar-toggler:before {
+    background-color: #090b17;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all .2s linear;
+    width: 100%;
+}
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute!important;
+    width: 1px;
+    word-wrap: normal!important;
+}
+.nav-item:hover{
+    text-decoration: none;
+    color: #343434cc;
+}
+.btn-login {
+    padding: 11px 21px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: #1b6abb;
+}
+.btn-login:hover {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav, .menu-1 {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,27 @@
+.img-background{
+    width: 100%;
+}
+.title-header{
+    color: #363636;
+    font-size: 45px;
+    font-weight: bold;
+}
+.paragraph-title{
+    color: #363636;
+    font-size: 15px;
+}
+.btn-primary {
+    padding: 11px 21px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: #1b6abb;
+}
+.btn-primary:hover {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    background: #1b6abb;
+}

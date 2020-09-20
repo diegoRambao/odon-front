@@ -1,0 +1,20 @@
+#treatment {
+    margin-top: 100px;
+}
+.treatment-meet {
+    text-align: center;
+}
+.img-card-treatment {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card-treatment {
+    background:#fff;
+    border-radius: 10px;
+}
+.card-body-treatment {
+    padding: 25px;
+}
+.title-card-treatment {
+    font-size: 20px;
+}

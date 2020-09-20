@@ -1,0 +1,33 @@
+#reason {
+    margin-top: 100px;
+}
+.card-reason {
+    background:#fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+.container-img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.green-color{
+    background: #00968845;
+}
+.blue-color {
+    background: #4b49f35c;
+}
+.orange-color {
+    background: #ffe14d57;
+}
+.img-reason {
+    height: 30px;
+}
+.title-card-reason {
+    font-size: 18px;
+    font-weight: bold;
+    color: #414141;
+}

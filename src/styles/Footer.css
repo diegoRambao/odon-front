@@ -1,0 +1,13 @@
+footer{
+    padding: 50px 0;
+}
+.footer-down {
+    text-align: center;
+}
+.footer-icons {
+    display: flex;
+    justify-content: space-between;
+}
+.icons-img {
+    height: 30px;
+}
