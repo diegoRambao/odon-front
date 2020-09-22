@@ -1,8 +1,11 @@
 p {
   font-size: 14px;
 }
+a {
+  color: #1b6abb;
+}
 
-input {
+input, textarea {
   appearance: none;
   background: #fff;
   border: 1px solid #dae2f2;
@@ -16,5 +19,83 @@ input {
   font-weight: 400;
   outline: none;
   padding: 20px;
+  font-size: 14px;
+  height: 40px;
+  margin-bottom: 18px;
   width: 100%;
+}
+label {
+  font-size: 14px;
+}
+
+.card {
+  border: 1px solid #efefef;
+  padding: 25px;
+}
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-primary-d {
+    outline: none !important;
+    background: #1b6abb;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 9px 12px;
+    width: 100%;
+}
+.form-row>.col, .form-row>[class*=col-] {
+  display: flex;
+  flex-direction: column;
+}
+.card .container-title .title{
+  font-size: 15px;
+  color: #343434cc;
+}
+.container-dashboard{
+  margin: 0 50px;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #1b6abb;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  outline: none;
+}
+.table {
+  font-size: 14px;
+  color: #343434cc;
+}
+.table .thead th{
+  border-color: #ededed;
+}
+.table td, .table th{
+  border-top: none;
+  border-bottom: 1px solid #f1f1f1;
+}
+.table-responsive {
+
+}
+.table-responsive::-webkit-scrollbar-track{
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.table-responsive::-webkit-scrollbar{
+  height: 8px;
+  background-color: #fff;
+}
+.table-responsive::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+@media (max-width: 520px) {
+  .container-dashboard{
+    margin: 0 15px;
+  }
 }

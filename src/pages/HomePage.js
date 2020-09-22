@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import About from './../components/About'
 import Contact from './../components/Contact'
@@ -10,7 +10,7 @@ import Treatment from './../components/Treatment'
 
 const HomePage = () => {
     return(
-        <Fragment>
+        <div style={{background: "#fff"}}>
             <Header />
             <main>
                 <Reason />
@@ -20,7 +20,7 @@ const HomePage = () => {
                 <Contact />
             </main>
             <Footer />
-        </Fragment>
+        </div>
     )
 }
 

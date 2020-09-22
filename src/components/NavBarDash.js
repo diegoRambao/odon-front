@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 import './../styles/Navbar.css'
 import './../styles/NavBarDash.css'
 
 import logo from './../assets/logo.png'
-import profile from './../assets/profile.jpg'
+import { environment } from './../utils/environment'
 
-import { getContextUser, logout } from './../services/Authentication.service'
+import { getContextUser, logout, singIn } from './../services/Authentication.service'
 
 const NavBarDash = () =>{
 
-    const { typeUser, person } = getContextUser();
+    const { person, typeUser} = getContextUser();
     let history = useHistory();
+    const profile = `${environment.urlFile}${person.imgUrl}`
 
     const handleLogout = () => {
         logout()
@@ -43,7 +44,7 @@ const NavBarDash = () =>{
                 </nav>
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     {
-                        typeUser == 'A' &&
+                        typeUser === 'A' &&
                         <div className="navbar-nav ml-auto">
                             <Link to="/" className="nav-item nav-link-s ml-4 font-nav-item">Inicio</Link>
                             <a href="#about" className="nav-item nav-link-s ml-4 font-nav-item">
@@ -62,16 +63,16 @@ const NavBarDash = () =>{
                     }
                     <div className="navbar-nav ml-auto">
                         <div className="dropdown">
-                            <div class="container-profile-nav" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                            <div className="container-profile-nav" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                                 <div className="">
-                                    <img src={profile} className="img-profile-nav"></img>
+                                    <img src={profile} className="img-profile-nav" alt="Imagen de perfil"></img>
                                 </div>
                                 <p className="name-profile-nav ml-2">{person.name} {person.surname}</p>
                             </div>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Perfil</a>
-                                <a class="dropdown-item" href="#">Mis Citas</a>
-                                <button class="dropdown-item" onClick={handleLogout}>Cerrar sesión</button>
+                            <div className="dropdown-menu shadow" aria-labelledby="dropdownMenuButton">
+                                <Link to="/profile" className="dropdown-item">Perfil</Link>
+                                <Link to="/main" className="dropdown-item">Mis citas</Link>
+                                <button className="dropdown-item" onClick={handleLogout}>Cerrar sesión</button>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './../components/Navbar'
-import { Redirect } from "react-router-dom";
 
 import './../styles/LoginPage.css'
 
@@ -41,9 +40,10 @@ const LoginPage = ({history}) => {
                                 id="login-email"
                                 placeholder="Tu email"
                                 className="form-input-login"
-                                type="text"
+                                type="email"
                                 value={form.email || ''}
                                 onChange={handleChange}
+                                required
                             />
                             <input
                                 name="password"
@@ -53,6 +53,7 @@ const LoginPage = ({history}) => {
                                 type="password"
                                 value={form.password || ''}
                                 onChange={handleChange}
+                                required
                             />
                             <button className="button-login">Iniciar sesión</button>
                             <div className="login-lostpassword">

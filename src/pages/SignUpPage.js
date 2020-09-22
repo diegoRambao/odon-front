@@ -37,11 +37,14 @@ const SignUpPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const res = signUp(form)
-       if(res){
-           alert('!Usuario registrado!')
-       }
-       setForm(formInterface)
+        signUp(form).then((res)=>{
+            if(res){
+                alert('!Usuario registrado!')
+            }
+            setForm(formInterface)
+        }).catch((error)=> {
+            console.log(error)
+        })
     }
 
     return(
@@ -59,6 +62,7 @@ const SignUpPage = () => {
                                 type="text"
                                 onChange={handleChangePerson}
                                 value={form.person.name || ''}
+                                required
                             />
                             <input
                                 name="surname"
@@ -68,6 +72,7 @@ const SignUpPage = () => {
                                 type="text"
                                 onChange={handleChangePerson}
                                 value={form.person.surname || ''}
+                                required
                             />
                             <input
                                 name="documentNumber"
@@ -77,15 +82,17 @@ const SignUpPage = () => {
                                 type="text"
                                 onChange={handleChangePerson}
                                 value={form.person.documentNumber || ''}
+                                required
                             />
                             <input
                                 name="email"
                                 id="register-email"
                                 placeholder="Corre electronico"
                                 className="form-input-register"
-                                type="text"
+                                type="email"
                                 onChange={handleChangePerson}
                                 value={form.person.email || ''}
+                                required
                             />
                             <input
                                 name="password"
@@ -95,6 +102,7 @@ const SignUpPage = () => {
                                 type="password"
                                 onChange={handleChange}
                                 value={form.password || ''}
+                                required
                             />
                             <button className="button-register">Crear mi cuenta</button>
                         </form>
