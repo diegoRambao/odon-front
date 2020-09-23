@@ -13,6 +13,10 @@ export const singIn = async(user) => {
     return res.data;
 }
 
+export const updateSession = (user) => {
+    localStorage.setItem('user', JSON.stringify(user));
+}
+
 export const logout = () => {
     localStorage.removeItem('user');
 }

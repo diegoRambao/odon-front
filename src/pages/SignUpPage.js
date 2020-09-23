@@ -1,24 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './../components/Navbar'
+import { User } from './../models/User'
 
 import { signUp } from './../services/Authentication.service'
 
 import './../styles/SignUp.css'
 
-const formInterface = {
-    "password": "",
-    "typeUser" : "P",
-    "username" : "maribel02",
-    "person" : {
-        "name" : "",
-        "surname" : ""
-    }
-}
-
 const SignUpPage = () => {
 
-    const [form, setForm] = useState(formInterface)
+    const [form, setForm] = useState(new User())
 
     const handleChange = (e) => {
         setForm({...form,
@@ -41,7 +32,7 @@ const SignUpPage = () => {
             if(res){
                 alert('!Usuario registrado!')
             }
-            setForm(formInterface)
+            setForm(new User())
         }).catch((error)=> {
             console.log(error)
         })

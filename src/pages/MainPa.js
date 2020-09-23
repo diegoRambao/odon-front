@@ -30,13 +30,11 @@ const MainPa = () => {
         getAppointmentUser(user.id, 1).then(({data}) => { setAppAttended(data)})
         getAllDentist().then(({data}) => setDentists(data))
     }, [])
-
     const handleChange = (e) => {
         setAppointment({...appointment,
             [e.target.name]: e.target.value,
         })
     }
-
     const handleChangeDentist = (e) => {
         setAppointment({...appointment,
             dentist: {
@@ -81,8 +79,7 @@ const MainPa = () => {
     return(
         <div className="row mt-5">
             <div className="col-md-6 mb-4">
-            {
-                !showCard&&
+            {!showCard&&
                 <div className="card shadow-sm">
                     <div className="header-card">
                         <div className="container-title">
@@ -124,7 +121,7 @@ const MainPa = () => {
                                             </tr>
                                         )
                                     }) :
-                                    <td colSpan="5"><h5 className="text-center">No hay citas sin atender</h5></td>
+                                    <tr><td colSpan="5"><h5 className="text-center">No hay citas sin atender</h5></td></tr>
                                 }
                                 </tbody>
                             </table>
@@ -175,7 +172,7 @@ const MainPa = () => {
                             </div>
                             <div className="form-group">
                                 <label>Observación</label>
-                                <textarea value={appointment.note} type="text" className="form-control" name="note" onChange={handleChange} name="note"></textarea>
+                                <textarea value={appointment.note} type="text" className="form-control" name="note" onChange={handleChange}></textarea>
                             </div>
                             <button className="btn-primary-d" type="submit">Enviar</button>
                         </form>
@@ -213,7 +210,7 @@ const MainPa = () => {
                                                 </tr>
                                             )
                                         }) :
-                                        <td colSpan="5"><h5 className="text-center">No hay citas Atendidas</h5></td>
+                                        <tr><td colSpan="5"><h5 className="text-center">No hay citas Atendidas</h5></td></tr>
                                     }
                                     </tbody>
                                 </table>

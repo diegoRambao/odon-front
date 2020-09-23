@@ -22,6 +22,7 @@ const LoginPage = ({history}) => {
             if(user){
                 history.push('/main')
             }
+            console.log(user)
         })
         .catch((error) => {
             console.log(error)

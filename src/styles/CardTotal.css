@@ -1,0 +1,26 @@
+.card-total {
+    padding: 10px 25px;
+    background: #fff;
+    border-radius: 5px;
+    border-left: 5px solid #4e73df!important;
+}
+.card-total .title {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #4e73df;
+}
+.content-card-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-card-total .number {
+    color: #343434cc;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+.content-card-total .icon i{
+    font-size: 30px;
+    color: #c9c9c9;
+}

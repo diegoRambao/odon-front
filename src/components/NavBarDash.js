@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import ImgProfile from './../components/ImgProfile'
 
 import './../styles/Navbar.css'
 import './../styles/NavBarDash.css'
@@ -7,13 +8,13 @@ import './../styles/NavBarDash.css'
 import logo from './../assets/logo.png'
 import { environment } from './../utils/environment'
 
-import { getContextUser, logout, singIn } from './../services/Authentication.service'
+import { getContextUser, logout } from './../services/Authentication.service'
 
 const NavBarDash = () =>{
 
     const { person, typeUser} = getContextUser();
+    const user = getContextUser();
     let history = useHistory();
-    const profile = `${environment.urlFile}${person.imgUrl}`
 
     const handleLogout = () => {
         logout()
@@ -46,32 +47,41 @@ const NavBarDash = () =>{
                     {
                         typeUser === 'A' &&
                         <div className="navbar-nav ml-auto">
-                            <Link to="/" className="nav-item nav-link-s ml-4 font-nav-item">Inicio</Link>
-                            <a href="#about" className="nav-item nav-link-s ml-4 font-nav-item">
-                                <span>Acerca De</span>
-                            </a>
+                            <Link to="/main" className="nav-item nav-link-s ml-4 font-nav-item">Inicio</Link>
                             <a href="#treatment" className="nav-item nav-link-s ml-4 font-nav-item">
-                                <span>Tratamientos</span>
+                                <span>Citas</span>
                             </a>
                             <a href="#location" className="nav-item nav-link-s ml-4 font-nav-item">
-                                <span>Ubicación</span>
+                                <span>Doctores</span>
                             </a>
-                            <a href="#contact" className="nav-item nav-link-s ml-4 font-nav-item">
-                                <span>Contacto</span>
+                            <a href="#location" className="nav-item nav-link-s ml-4 font-nav-item">
+                                <span>Pacientes</span>
                             </a>
+                            <li className="nav-item dropdown ml-4 font-nav-item">
+                                <a className="nav-item dropdown-toggle" href="#" id="configuration" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Configuracion
+                                </a>
+                                <div className="dropdown-menu shadow" aria-labelledby="configuration">
+                                    <Link to="/gender" className="dropdown-item nav-item">Generos</Link>
+                                    <Link to="/specialty" className="dropdown-item nav-item">Especialidades</Link>
+                                    <Link to="/type_document" className="dropdown-item nav-item">Tipos de documentos</Link>
+                                </div>
+                            </li>
                         </div>
                     }
                     <div className="navbar-nav ml-auto">
                         <div className="dropdown">
                             <div className="container-profile-nav" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                                 <div className="">
-                                    <img src={profile} className="img-profile-nav" alt="Imagen de perfil"></img>
+                                    <ImgProfile user={user} width="40px" height="40px"/>
                                 </div>
                                 <p className="name-profile-nav ml-2">{person.name} {person.surname}</p>
+                                <i className="fas fa-chevron-down ml-2"></i>
                             </div>
                             <div className="dropdown-menu shadow" aria-labelledby="dropdownMenuButton">
                                 <Link to="/profile" className="dropdown-item">Perfil</Link>
-                                <Link to="/main" className="dropdown-item">Mis citas</Link>
+                                {typeUser === 'P' && <Link to="/main" className="dropdown-item">Mis citas</Link>}
+                                <div className="dropdown-divider"></div>
                                 <button className="dropdown-item" onClick={handleLogout}>Cerrar sesión</button>
                             </div>
                         </div>

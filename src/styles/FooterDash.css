@@ -1,0 +1,18 @@
+.footer-dash {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-top: 1px solid #d2d6de;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.footer-dash .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-dash p {
+    margin-bottom: 0;
+}

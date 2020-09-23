@@ -2,6 +2,7 @@ import React from 'react'
 
 import NavBarDash from './../components/NavBarDash'
 import MainPa from './MainPa'
+import MainAd from './MainAd'
 import { getContextUser } from './../services/Authentication.service'
 
 const Dashboard = () => {
@@ -12,7 +13,7 @@ const Dashboard = () => {
             <div className="container-dashboard">
                 {
                     typeUser === 'A'?
-                        <h1>ADMINISTRADOR</h1>
+                    <MainAd />
                     :
                     <MainPa />
                 }
